@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Tela de Login
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+        <div class="col">
+         <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-primary" type="submit">Login</button>
+        </form>
+        </div>
+    </div>
+{% endblock %}
