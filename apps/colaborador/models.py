@@ -7,7 +7,7 @@ from apps.departamento.models import Departamento
 # my class for created users.
 class Colaborador(models.Model):
     nome_colaborador = models.CharField(max_length=100, help_text='Nome do colaboradores')
-    nome_usuario = models.OneToOneField(User, on_delete=models.PROTECT, related_name='user_name_test')
+    user = models.OneToOneField(User, on_delete=models.PROTECT, related_name='user_name_test')
     trabalha_na_empresa = models.ForeignKey(Empresa, null=True, on_delete=models.PROTECT, related_name='onde_trabalha',
                                             help_text='Em qual empresa o colaborador trabalha')
     no_setor = models.ForeignKey(Departamento, null=True, on_delete=models.PROTECT, related_name='em_qual_setor',
