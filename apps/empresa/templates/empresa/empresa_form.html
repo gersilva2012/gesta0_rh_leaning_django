@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
+
 {% block title %}
-    Início
+    CreateCompany
 {% endblock %}
+
 {% block main %}
     Oi  {{ usuario.colaborador.nome_colaborador }}
     <p></p>
     {% if usuario.colaborador.nome_empresa %}
         Já tem uma empresa!
     {% else %}
-        Ainda não tem empresa!
+        Cria uma empresa
     {% endif %}
 {% endblock %}
